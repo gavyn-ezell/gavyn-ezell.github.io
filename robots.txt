@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://gezell.github.io/sitemap.xml
+Sitemap: https://gavyn-ezell.github.io/sitemap.xml
