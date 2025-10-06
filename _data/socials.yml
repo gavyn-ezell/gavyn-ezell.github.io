@@ -2,15 +2,14 @@
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
 
-email: ezellgavyn@gmail.com 
+email: ezellgavyn@gmail.com
 github_username: gavyn-ezell
 linkedin_username: gavyn-ezell
 bluesky_url: https://bsky.app/profile/gezell02.bsky.social
-discord_id: 264188484426792960 
-
+discord_id: 264188484426792960
 # custom_social: # can be any name here other than the ones already defined above
 #   logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-#   title: 
+#   title:
 #   url: https://www.alberteinstein.com/
 
 # academia_edu:  your organization and your username Ex. https://organization.academia.edu/UserName

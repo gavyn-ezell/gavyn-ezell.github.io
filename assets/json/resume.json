@@ -7,7 +7,7 @@
     "phone": "",
     "url": "https://gavyn-ezell.github.io/",
     "summary": "",
-    "location": {    },
+    "location": {},
     "profiles": [
       {
         "network": "Twitter",
@@ -54,8 +54,7 @@
       "highlights": []
     }
   ],
-  "volunteer": [
-  ],
+  "volunteer": [],
   "education": [
     {
       "institution": "University of California, San Diego",
@@ -69,78 +68,37 @@
       "courses": []
     }
   ],
-  "awards": [
-  ],
-  "certificates": [
-
-  ],
-  "publications": [
-
-  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
   "skills": [
     {
       "name": "Programming Languages",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Typescript",
-        "Python",
-        "C/C++",
-        "Dart",
-        "SQL"
-      ]
+      "keywords": ["Typescript", "Python", "C/C++", "Dart", "SQL"]
     },
     {
       "name": "Frameworks and Libraries",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "React",
-        "Tailwind",
-        "LangChain",
-        "Selenium",
-        "FastAPI",
-        "Flutter"
-      ]
+      "keywords": ["React", "Tailwind", "LangChain", "Selenium", "FastAPI", "Flutter"]
     },
     {
       "name": "Technologies and Tools",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Node",
-        "Bitbucket",
-        "Jira",
-        "Bitbucket",
-        "Github",
-        "Docker",
-        "Google Cloud",
-        "AWS",
-        "Firebase",
-        "Supabase"
-      ]
+      "keywords": ["Node", "Bitbucket", "Jira", "Bitbucket", "Github", "Docker", "Google Cloud", "AWS", "Firebase", "Supabase"]
     },
     {
       "name": "Games and Graphics",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Unity",
-        "Godot",
-        "GDScript",
-        "C#",
-        "Three.js",
-        "GLSL"
-      ]
+      "keywords": ["Unity", "Godot", "GDScript", "C#", "Three.js", "GLSL"]
     }
   ],
-  "languages": [
-
-  ],
-  "interests": [
-  ],
-  "references": [
-  ],
-  "projects": [
-  ]
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": []
 }

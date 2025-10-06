@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Double Elimination Bracket Generator
-description: Simple web app for visualizing double elimination brackets with fair seed placement. 
+description: Simple web app for visualizing double elimination brackets with fair seed placement.
 img: assets/img/bracket-generator.jpg
 importance: 2
 category: software
