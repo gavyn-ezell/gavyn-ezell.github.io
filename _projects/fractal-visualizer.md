@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Gavyn's Voyage
-description: A former 3D personal website I had used for myself, built in Three.js
-img: assets/img/voyage.jpg
-importance: 2
+title: Fractal Noise Visualizer
+description: Implemented 1D fractal noise and built a simple visualizer in Godot with parameter control
+img: assets/img/fractal-noise.jpg
+importance: 1
 category: games and graphics
 related_publications: false
-redirect: https://gavyns-voyage.vercel.app/
+redirect: https://gezell.itch.io/fractal-noise-visualizers
 ---
 
 Every project has a beautiful feature showcase page.

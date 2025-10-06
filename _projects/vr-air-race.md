@@ -3,7 +3,7 @@ layout: page
 title: VR Air Race
 description: A basic VR air racing game for a 3D user interaction class
 img: assets/img/air-race.jpg
-importance: 4
+importance: 5
 category: games and graphics
 related_publications: false
 redirect: https://www.youtube.com/shorts/iK48hEC3VT8?feature=share

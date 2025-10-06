@@ -8,7 +8,7 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
-  per_page: 5
+  per_page: 3
   sort_field: date
   sort_reverse: true
   trail:
@@ -56,7 +56,7 @@ pagination:
   </div>
   {% endif %}
 
-{% assign featured_posts = site.posts | where: "featured", "true" %}
+{% assign featured_posts = site.posts | where: "featured", "true" | where_exp: "post", "post.draft != true" %}
 {% if featured_posts.size > 0 %}
 <br>
 
@@ -104,9 +104,9 @@ pagination:
   <ul class="post-list">
 
     {% if page.pagination.enabled %}
-      {% assign postlist = paginator.posts %}
+      {% assign postlist = paginator.posts | where_exp: "post", "post.draft != true" %}
     {% else %}
-      {% assign postlist = site.posts %}
+      {% assign postlist = site.posts | where_exp: "post", "post.draft != true" %}
     {% endif %}
 
     {% for post in postlist %}

@@ -3,7 +3,7 @@ layout: page
 title: VR Drummer
 description: A basic VR Drummer game built for a 3D user interaction class
 img: assets/img/vr-drummer.jpg
-importance: 2
+importance: 4
 category: games and graphics
 related_publications: false
 redirect: https://www.youtube.com/watch?v=pO47Sb1C1MA
