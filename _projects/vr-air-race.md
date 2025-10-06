@@ -1,7 +1,7 @@
 ---
 layout: page
 title: VR Air Race
-description: A basic VR Drummer game built for a 3D user interaction class
+description: A basic VR air racing game for a 3D user interaction class
 img: assets/img/air-race.jpg
 importance: 4
 category: games and graphics

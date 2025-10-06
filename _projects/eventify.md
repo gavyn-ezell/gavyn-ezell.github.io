@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Eventify
-description: On-campus event finding site build with an ACM project group
+description: On-campus event finding site built with an ACM project group
 img: assets/img/eventify.jpg
 importance: 3
 category: software
