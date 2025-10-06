@@ -25,7 +25,6 @@ latest_posts:
 ---
 
 <br>
-<br>
 
 I am a passionate software developer working as a QA Automation Engineer @ Emporia Energy, where we are building an AI driven end to end test executor.
 

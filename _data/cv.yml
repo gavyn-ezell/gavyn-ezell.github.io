@@ -1,12 +1,16 @@
-- title: General Information
+- title: About 
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+    - name: Name
+      value: Gavyn Ezell
+    - name: Position
+      value: QA Automation Engineer
+    - name: Email
+      value: ezellgavyn@gmail.com
+    - name: Location
+      value: Denver, CO
+    - name: LinkedIn
+      value: https://www.linkedin.com/in/gavyn-ezell/
 
 - title: Education
   type: time_table
