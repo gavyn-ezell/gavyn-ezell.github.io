@@ -194,11 +194,12 @@ ul.task-list input[type="checkbox"] {
 
 .profile {
   width: 100%;
+  margin-bottom: 15px;
 
   .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+    margin-top: 0px;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
 
     p {
       display: inline-block;
@@ -238,6 +239,14 @@ ul.task-list input[type="checkbox"] {
       color: var(--global-theme-color);
       text-decoration: none;
     }
+  }
+}
+
+// About page subtitle
+.post-header {
+  .desc {
+    font-weight: bold;
+    color: var(--global-theme-color);
   }
 }
 
@@ -1423,3 +1432,4 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
