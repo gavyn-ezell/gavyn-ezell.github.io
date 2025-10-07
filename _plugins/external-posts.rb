@@ -23,20 +23,114 @@ module ExternalPosts
     end
 
     def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml)
-      process_entries(site, src, feed.entries)
+      # Add proper headers to avoid being blocked
+      headers = {
+        'User-Agent' => 'Mozilla/5.0 (compatible; Jekyll External Posts Plugin)',
+        'Accept' => 'application/rss+xml, application/xml, text/xml'
+      }
+      
+      response = HTTParty.get(src['rss_url'], headers: headers, timeout: 10)
+      
+      # Check if the response was successful
+      unless response.success?
+        puts "   ERROR: Failed to fetch RSS feed (HTTP #{response.code})"
+        return
+      end
+      
+      xml = response.body
+      return if xml.nil? || xml.strip.empty?
+      
+      # Add error handling for Feedjira parsing
+      begin
+        feed = Feedjira.parse(xml)
+        
+        # Check if feed parsing was successful
+        if feed.nil?
+          puts "   ERROR: Failed to parse RSS feed - feed is nil"
+          return
+        end
+        
+        # Check if feed is actually an error object
+        if feed.is_a?(Numeric) || !feed.respond_to?(:entries)
+          puts "   ERROR: RSS feed parsing failed - invalid feed format"
+          return
+        end
+        
+        process_entries(site, src, feed.entries)
+      rescue Feedjira::NoParserAvailable => e
+        puts "   ERROR: No valid parser for RSS feed format"
+        puts "   This might happen if the RSS feed URL is returning HTML or an invalid XML format"
+        puts "   Feed URL: #{src['rss_url']}"
+        return
+      rescue => e
+        puts "   ERROR: Failed to parse RSS feed: #{e.message}"
+        puts "   #{e.class}"
+        return
+      end
+    end
+
+    def extract_first_paragraph(html_content)
+      return '' if html_content.nil? || html_content.strip.empty?
+      # Remove HTML tags first
+      text = html_content.gsub(/<[^>]*>/, ' ').strip
+      # Get first sentence or first 500 chars, whichever is shorter
+      first_sentence = text.split(/[.!?]\s+/).first || text
+      first_sentence.length > 500 ? first_sentence[0..500] : first_sentence
+    end
+
+    def clean_text(text)
+      return '' if text.nil? || text.strip.empty?
+      # Strip HTML tags aggressively
+      clean = text.gsub(/<[^>]*>/, ' ')
+      # Decode common HTML entities
+      clean = clean.gsub(/&nbsp;/, ' ').gsub(/&amp;/, '&').gsub(/&lt;/, '<').gsub(/&gt;/, '>').gsub(/&quot;/, '"').gsub(/&#39;/, "'")
+      # Remove extra whitespace
+      clean = clean.gsub(/\s+/, ' ').strip
+      # HARD LIMIT to 150 characters for card descriptions
+      if clean.length > 150
+        # Try to cut at a word boundary
+        truncated = clean[0..150]
+        last_space = truncated.rindex(' ')
+        truncated = truncated[0..last_space] if last_space && last_space > 100
+        truncated.strip + '...'
+      else
+        clean
+      end
     end
 
     def process_entries(site, src, entries)
       entries.each do |e|
         puts "...fetching #{e.url}"
+        
+        # Extract tags/categories from the feed entry if available
+        tags = []
+        categories = []
+        
+        if e.respond_to?(:categories) && e.categories
+          tags = e.categories.is_a?(Array) ? e.categories : [e.categories]
+        end
+        
+        if e.respond_to?(:tags) && e.tags
+          tags += e.tags.is_a?(Array) ? e.tags : [e.tags]
+        end
+        
+        # Get summary - prefer e.summary, but if not available extract from content
+        raw_summary = e.summary
+        if raw_summary.nil? || raw_summary.strip.empty?
+          # Extract first paragraph or sentence from content as fallback
+          raw_summary = extract_first_paragraph(e.content) if e.content
+        end
+        
+        # Clean and limit the summary to max 200 chars
+        clean_summary = clean_text(raw_summary) if raw_summary
+        
         create_document(site, src['name'], e.url, {
           title: e.title,
           content: e.content,
-          summary: e.summary,
-          published: e.published
+          summary: clean_summary,
+          published: e.published,
+          tags: tags.uniq,
+          categories: categories
         })
       end
     end
@@ -58,13 +152,19 @@ module ExternalPosts
       )
       doc.data['external_source'] = source_name
       doc.data['title'] = content[:title]
-      doc.data['feed_content'] = content[:content]
-      doc.data['description'] = content[:summary]
+      # Ensure description is short and clean for the blog card
+      doc.data['description'] = content[:summary] || ''
       doc.data['date'] = content[:published]
-      doc.data['redirect'] = url
-      doc.content = content[:content]
+      doc.data['redirect'] = url  # Link directly to the external article
+      doc.data['tags'] = content[:tags] || []
+      doc.data['categories'] = content[:categories] || ['external-posts']
+      
+      # Set minimal content since we're redirecting
+      doc.content = "This post is available on [#{source_name}](#{url})."
+      
       site.collections['posts'].docs << doc
     end
+    
 
     def fetch_from_urls(site, src)
       src['posts'].each do |post|
