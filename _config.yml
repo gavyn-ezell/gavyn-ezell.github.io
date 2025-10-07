@@ -40,11 +40,10 @@ repo_trophies:
 # -----------------------------------------------------------------------------
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
-# feed:
-#   title: dev notes
-#   url: https://dev.to/feed/gezell
-#   author: Gavyn Ezell
-#   description: logging and sharing my learnings as a developer
+feed:
+  title: dev notes
+  author: Gavyn Ezell
+  description: logging and sharing my learnings as a developer
 # -----------------------------------------------------------------------------
 # Layout
 # -----------------------------------------------------------------------------
@@ -125,8 +124,8 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: dev.to
-    rss_url: https://dev.to/feed/gezell
+  # - name: dev.to
+  #   rss_url: https://dev.to/feed/gezell
   # - name: dev blog
   #   posts:
   #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
