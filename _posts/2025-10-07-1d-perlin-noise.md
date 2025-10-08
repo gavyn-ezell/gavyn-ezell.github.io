@@ -31,7 +31,7 @@ featured: false
 
 ## Intro
 
-After watching this [talk](https://www.youtube.com/watch?v=Z8mAN378kIw) about perlin noise applications, I sought to build a 1D perlin noise visualizer to better understand the algorithm before moving onto 2D and 3D.
+After watching this [talk](https://www.youtube.com/watch?v=Z8mAN378kIw) about perlin noise applications. Noise libraries already exist, but I sought to build a 1D perlin noise visualizer from scratch to better understand the algorithm before moving onto 2D and 3D.
 
 I wrote this article to test to my understanding and help others trying to learn as well.
 
@@ -85,6 +85,8 @@ Take a look at this graph that plots noise value points at each integer _x_ on t
 #### Picking a Hash Function
 
 One easy hash function we can use, inspired by Ken Perlin's published code, utilizes a have uniformly distributed 256 length array with distinct values between 0-256 at each index.
+
+> There are much better hash functions to use or explore for generating noise, but for the purpose of this writeup we're using this one. This Reddit post has some [interesting info](https://www.reddit.com/r/GraphicsProgramming/comments/1482ltl/what_is_a_good_hashing_algorithm_for_perlin_noise/)
 
 Then when when we have an input integer _x_, we simply index into the array. This will give us an integer in the range [0, 256] which we can the perform a **min-max normalization** to get our final noise value between [-1, 1]
 
