@@ -63,7 +63,7 @@
       "area": "Computer Science",
       "studyType": "Bachelor of Science",
       "startDate": "2020-10-01",
-      "endDate": "20245-06-01",
+      "endDate": "2024-06-01",
       "score": "",
       "courses": []
     }
@@ -88,7 +88,7 @@
       "name": "Technologies and Tools",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": ["Node", "Bitbucket", "Jira", "Bitbucket", "Github", "Docker", "Google Cloud", "AWS", "Firebase", "Supabase"]
+      "keywords": ["Node", "Jira", "Bitbucket", "Github", "Docker", "Google Cloud", "AWS", "Firebase", "Supabase"]
     },
     {
       "name": "Games and Graphics",
