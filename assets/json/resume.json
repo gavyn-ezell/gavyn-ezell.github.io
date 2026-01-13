@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Gavyn Ezell",
-    "titles": "QA Automation Engineer, Software Developer, Aspiring Game Developer",
+    "titles": "Software Quality Assurance Engineer, Software Developer, Aspiring Game Developer",
     "image": "",
     "email": "ezellgavyn@gmail.com",
     "phone": "",
@@ -19,7 +19,7 @@
   "work": [
     {
       "name": "Emporia Energy",
-      "position": "QA Automation Engineer",
+      "position": "Software Quality Assurance Engineer",
       "url": "",
       "startDate": "2025-03-31",
       "endDate": "",

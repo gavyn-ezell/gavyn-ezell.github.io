@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: QA Automation Engineer @ Emporia Energy
+subtitle: Software Quality Assurance Engineer @ Emporia Energy
 
 profile:
   align: right
@@ -26,7 +26,7 @@ latest_posts:
 
 <br>
 
-I am a passionate software developer working as a QA Automation Engineer @ Emporia Energy, where we are building an AI powered end to end test executor.
+I am a passionate software developer working as a Software Quality Assurance Engineer @ Emporia Energy, where we built an AI powered end to end test executor.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
