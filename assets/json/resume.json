@@ -76,19 +76,19 @@
       "name": "Programming Languages",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": ["Typescript", "Python", "C/C++", "Dart", "SQL"]
+      "keywords": ["Typescript", "Python", "C++", "Dart", "SQL"]
     },
     {
       "name": "Frameworks and Libraries",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": ["React", "Tailwind", "LangChain", "Selenium", "FastAPI", "Flutter"]
+      "keywords": ["React", "Tanstack Router", "FastAPI", "Express.js", "LangChain", "Appium", "Flutter"]
     },
     {
       "name": "Technologies and Tools",
       "level": "",
       "icon": "fa-solid fa-hashtag",
-      "keywords": ["Node", "Jira", "Bitbucket", "Github", "Docker", "Google Cloud", "AWS", "Firebase", "Supabase"]
+      "keywords": ["Node", "Bitbucket", "Github", "Docker", "Vercel", "AWS", "DynamoDB", "ECR", "App Runner", "Supabase", "Gemini"]
     },
     {
       "name": "Games and Graphics",
