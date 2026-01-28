@@ -101,6 +101,11 @@ ninja.data = [{
           description: "A former 3D personal website I had used for myself, built in Three.js",
           section: "Projects",handler: () => {
               window.location.href = "/projects/gavyns-voyage.html";
+            },},{id: "projects-potlucky",
+          title: 'potlucky',
+          description: "Built a simple web app for potluck planning using React, FastAPI, and DynamoDB.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/potlucky.html";
             },},{id: "projects-raytracer",
           title: 'raytracer',
           description: "Built a simple 3D raytracing engine in C++",
