@@ -1,12 +1,12 @@
 ---
 layout: page
 title: TwoFrame
-description: Built a fullstack website for managing video game tournaments
+description: Built a fullstack web app for managing tournaments
 img: assets/img/twoframe.jpg
 importance: 1
 category: software
 related_publications: false
-redirect: https://github.com/TwoFrame/twoframe
+redirect: https://twoframe.vercel.app/
 ---
 
 Every project has a beautiful feature showcase page.
