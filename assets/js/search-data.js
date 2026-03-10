@@ -123,7 +123,7 @@ ninja.data = [{
               window.location.href = "/projects/twoframe-bracket-generator.html";
             },},{id: "projects-twoframe",
           title: 'TwoFrame',
-          description: "Built a fullstack website for managing video game tournaments",
+          description: "Built a fullstack web app for managing tournaments",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twoframe.html";
             },},{id: "projects-vr-air-race",
