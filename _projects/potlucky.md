@@ -2,7 +2,7 @@
 layout: page
 title: potlucky
 description: Built a simple web app for potluck planning using React, FastAPI, and DynamoDB.
-img: assets/img/potlucky/pl.gif
+img: assets/img/potlucky/pl.jpg
 importance: 1
 category: software
 related_publications: false
