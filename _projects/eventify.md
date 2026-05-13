@@ -4,7 +4,7 @@ title: Eventify
 description: On-campus event finding site built with an ACM project group
 img: assets/img/eventify.jpg
 importance: 3
-category: software
+category: archived
 related_publications: false
 redirect: https://github.com/acmucsd-projects/sp23-hack-team-3
 ---

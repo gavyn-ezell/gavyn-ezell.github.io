@@ -4,7 +4,7 @@ title: Super Smash Bros. Player Tracker
 description: A web app for keeping track of your favorite competitors in the Super Smash Bros. eSports scene.
 img: assets/img/ssbu-tracker.jpg
 importance: 4
-category: software
+category: archived
 related_publications: false
 redirect: https://www.youtube.com/watch?v=C5CvZujBBcg
 ---
